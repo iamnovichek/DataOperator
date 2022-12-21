@@ -5,6 +5,7 @@ import phonenumbers
 
 # get current dir
 current_directory = os.getcwd()
+file__name = "UsersData.json"
 
 # --> check if phone number is valid or not
 def phone_number_validation():
@@ -81,7 +82,7 @@ def first_and_last_name_validation(name = "",first_or_last_name = ""):
 # --> some rules for user name
 def check_user_name(user_name):
   
-    with open(f"{current_directory}/UsersData.json", "r") as f:
+    with open(f"{current_directory}/{file__name}", "r") as f:
 
         data = json.load(f)
    
