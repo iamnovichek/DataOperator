@@ -5,17 +5,21 @@ from functions import *
 
 # get current dir
 current_directory = os.getcwd()
+file_name = "UsersData.json"
 
 # try to find "JSON" file
 try:
-    with open(f"{current_directory}/UsersData.json", "r") as f:
+    with open(f"{current_directory}/{file_name}", "r") as f:
         
         data = json.load(f)
 # if it does not exist
 # --> create it
 except:
-    f = open(f"{current_directory}/UsersData.json", "w")
-    f.close()
+    
+    with open(f"{current_directory}/{file_name}", "w") as f:
+
+        meta = dict()
+        f.write(json.dumps(meta))
 
 
 # our program 
@@ -30,13 +34,13 @@ while True:
         
         user_data = enter_data()
         
-        with open(f"{current_directory}/UsersData.json","r") as js:
+        with open(f"{current_directory}/{file_name}","r") as js:
         
             data = json.load(js)
 
         data.update(user_data)
 
-        with open(f"{current_directory}/UsersData.json","w") as jso:
+        with open(f"{current_directory}/{file_name}","w") as jso:
         
             jso.write(json.dumps(data,indent=2))
 
@@ -49,7 +53,7 @@ while True:
         
         find_user = input()
 
-        with open(f"{current_directory}/UsersData.json","r") as js:
+        with open(f"{current_directory}/{file_name}","r") as js:
     
             data = json.load(js)
 
@@ -72,7 +76,7 @@ while True:
         
         find_user = input()
 
-        with open(f"{current_directory}/UsersData.json","r") as js:
+        with open(f"{current_directory}/{file_name}","r") as js:
     
             data = json.load(js)
 
@@ -85,7 +89,7 @@ while True:
 
         del data[find_user]
 
-        with open(f"{current_directory}/UsersData.json","w") as jso:
+        with open(f"{current_directory}/{file_name}","w") as jso:
             
             jso.write(json.dumps(data,indent=2))
         
