@@ -91,7 +91,7 @@ while True:
 
         with open(f"{current_directory}/{file_name}","w") as jso:
             
-            jso.write(json.dumps(data,indent=2))
+            json.write(json.dumps(data,indent=2))
         
         print(f"User: \"{find_user}\" has been successful deleted!\n")
         continue
