@@ -2,6 +2,9 @@
 # Data operator
 
 
+This program is not perfect, but it was written at a time when I had just finished learning the basics of Python.So, don't judge harshly)
+
+
 
 
 ## Installation
