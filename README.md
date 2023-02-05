@@ -18,16 +18,11 @@ Open Comand Prompt and enter:
   pip install phonenumbers
 ```
 
-#### For Linux :
-Open Terminal and enter: 
-```bash
-  pip install phonenumbers
-```
 
 #### For macOS :
 Open Mac Terminal and enter: 
 ```bash
-  pip install phonenumbers
+  pip3 install phonenumbers
 ```
 
 ### That is all!
